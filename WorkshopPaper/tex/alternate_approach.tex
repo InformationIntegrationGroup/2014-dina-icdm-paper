@@ -1,0 +1,87 @@
+\section{Alternate Approach: Processing with Excel}
+
+Microsoft Excel is one of the most widely used applications for data cleaning and preparation. It is not only easy to learn but also powerful to perform numerous computations across multiple rows and columns. Other proprietary packages that are available for data preparation are much more complex to use and usually require  user training. Despite Excel being very popular amongst users who are not tech savvy and do not possess the skills to write scripts for data preparation, we illustrate several shortcomings of using Excel for data preparation. 
+
+\begin{table}[h]
+	\centering	
+	\caption{Sample acceleroemter data after adding magnitude\label{tab:sample_data_acce}}
+  	\begin{tabular}{ | p{2cm} | p{1.3cm} | p{1cm} | p{1cm} | p{1.5cm} | }
+    	\hline
+	    \textbf{timestamp} & \textbf{x} & \textbf{y} & \textbf{z} & \textbf{magnitude} \\ \hline
+		1387969178.5018 & 0.7374141 & 4.096479 & 10.688913 & 11.47073585 \\ \hline
+		1387969180.1531 & -0.6596026 & 4.035427 & 10.85531 & 11.59989232 \\ \hline
+		1387969180.1649 & -0.533907 & 4.3382936 & 10.539276 & 11.40974087 \\ \hline
+		1387969180.2361 & -0.8535329 & 4.820725 & 8.850166 & 10.11401731 \\
+	    \hline
+  	\end{tabular}
+\end{table}
+
+One of the most important and rather annoying aspects of data preparation is its iterative nature. Users repeat the same steps to process each file in the data set. Even if the user is able to automate some parts of the data preparation using Excel, they still need to invoke the data mining services and feed in the processed files for training and testing. Moreover, using Excel does not let users to share the transformations in a way that other users can reuse the steps recorded previously by someone. 
+
+\begin{table}[h]
+	\centering	
+	\caption{Sample ouput after running the addDFT script\label{tab:sample_acce_dft}}
+  	\begin{tabular}{ | p{1.1cm} | p{1.3cm} | p{1.4cm} | p{1.4cm} | p{1.4cm} | }
+    	\hline
+	    \textbf{timestamp} & \textbf{magnitude} & \textbf{DFT\_E1} & \textbf{DFT\_E2} & \textbf{DFT\_E3} \\ \hline
+		1387969180 & 11.59989232 & 134.5575019 & 130.1821866 & 121.6616183 \\ \hline
+		1387969185 & 10.97777657 & 120.5115784 & 144.8429085 & 142.997428 \\ \hline
+		1387969214 & 11.56426981 & 133.7323362 & 140.4465978 & 150.3014305 \\ \hline
+		1387969282 & 4.014597704 & 16.11699473 & 16.11699473 & 22.75025583 \\
+	    \hline
+  	\end{tabular}
+\end{table}
+
+We start by processing the AccelerometerSensor file for the first day. The timestamp column in the file contains decimal values; hence we change the default column format in excel, to contain decimal point upto 4 places. We then add a new column for the acceleration magnitude, that is calculated as the sum of squared values of the x,y and z coordinates. The coordinate values are fetched from their respective columns in the same file as shown in Table\ref{tab:sample_data_acce}. We apply a formula to get the magnitude value for the first row, and repeat it across the entire worksheet to calculate accleration magnitude for the remaining rows. Once we have the magnitude, we prepare the file for DFT calculation. We select two columns --- timestamp and magnitude, and create a new file having only these columns. The addDFT Python script is executed from the command line with the newly created file as input. The script generates an output file having the DFT energy coefficients at 1Hz, 2Hz, and 3Hz of the acceleration magnitude for every 1 second time window.
+
+% \begin{table}[h]
+% 	\centering	
+% 	\caption{Showing 5 columns from the LocationProbe dataset\label{tab:sample_location_data}}
+%   	\begin{tabular}{ | p{1.1cm} | p{2cm} | p{2cm} | p{1cm} | p{0.732009cm} | }
+%     	\hline
+% 	    \textbf{timestamp} & \textbf{latitude} & \textbf{longitude} & \textbf{speed} & \textbf{accuracy} \\ \hline
+% 	    1387969151 & 22.58586372 & 88.38064909 & 0 & 32 \\ \hline
+% 		1387969185 & 22.5858598 & 88.37985344 & 0 & 12 \\ \hline
+% 		1387969186 & 22.58581108 & 88.37984354 & 0.80203056 & 12 \\ \hline
+% 		1387969282 & 22.58534547 & 88.37977455 & 1.0898862 & 24 \\
+% 	    \hline
+%   	\end{tabular}
+% \end{table}
+
+The Accelerometer sensor produces a large number of readings when compared to the GPS sensor. Before using the LocationProbe file, we merge all of the files from three days into one because we only perform join operation using the LocationProbe data with the addDFT service output, and no other transformations. The accelerometer data cannot be merged because it contains continuous timeseries data and the DFT calculations are performed over a time window. Merging the accelerometer data files will create gaps in the time window leading to incorrect DFT calculations. The merging of LocationProbe file is done in both our approaches. 
+
+
+In the LocationProbe file, we select and copy 3 columns – `timestamp', `mSpeed', `mAccuracy' into a new worksheet. We format the timestamp column to have decimal values and add a new column, `absTimestamp', that will contain the absolute values of timestamp. We apply the `Round' formula to populate the `absTimestamp' column. In the next step, we load the output file generated from the addDFT script into a new worksheet in the current workbook. We join the two worksheets to combine the speed and accuracy columns with the DFT energy coefficients. We then add two new columns for speed and accuracy and apply the VLookUp formula to join the LocationProbe data by using the `absTimestamp' column as the key.
+
+\begin{table}[h]
+	\centering	
+	\caption{Processed LocationProbe data \label{tab:processed_location_data}}
+  	\begin{tabular}{ | p{2cm} | p{2cm} | p{1cm} | p{1.5cm} | }
+    	\hline
+	    \textbf{timestamp} & \textbf{absTimestamp} & \textbf{mSpeed} & \textbf{mAccuracy} \\ \hline
+	    1387969150.56400 & 1387969151.00000 & 0 & 32 \\ \hline
+ 		1387969173.56800 & 1387969174.00000 & 1.3263288 & 12 \\ \hline
+ 		1387969185.71600 & 1387969186.00000 & 0.80203056 & 12 \\ \hline
+ 		1387969282.09300 & 1387969282.00000 & 1.0898862 & 24 \\
+	    \hline
+  	\end{tabular}
+\end{table}
+
+\begin{table*}[bp]
+	\centering
+	\caption{Structure of the processed file\label{tab:sample_csv}}
+  	\begin{tabular}{ |c|c|c|c|c|c|c|c|}
+    	\hline
+	    \textbf{Timestamp} & \textbf{Magnitude} & \textbf{DFT\_E1} & \textbf{DFT\_E2} & \textbf{DFT\_E3} & \textbf{Speed} & \textbf{Accuracy} & \textbf{Mode} \\ \hline
+	    1387869469 & 0 & 16 & 11.691308968 & 136.686705385 & 139.957767168 & 139.957767168 & walking \\ \hline
+		1387870904 & 0 & 16 & 12.1850014516 & 148.474260375 & 146.964104434 & 148.759649196 & auto \\ \hline
+		1387872050 & 0 & 24 & 11.3212865392 & 128.171528903 & 136.300006172 & 133.300527309 & bus \\ \hline
+		1387874848 & 0 & 858 & 12.080955151 & 145.94947736 & 145.866842087 & 143.819565165 & stationary \\
+	    \hline
+  	\end{tabular}
+\end{table*}
+
+We add separate VLookUp formulas for each of the speed and accuracy columns to populate the respective values. For the rows that could not yield any value after the join, either for speed or for the accuracy column, we delete them and save the file as a CSV file. The missing values in the data set arise due to failure of probes --- accelerometer or GPS, while collecting data for a particular timestamp. We now execute the addLabel Python script using the previously joined file as input and generate our final processed file with the mode of transportation labels. The addLabel script attaches the mode of transportation label to each row based on the time intervals specified by the user. Table \ref{tab:sample_csv} shows the structure of the processed CSV file that is used to train and test the SVM model.
+
+Since this is the first file that we process, we will execute the svmTraining script and use the processed data as training set. For the files from the succeeding days, we first invoke SVM testing script and evaluate our model for the accuracy. We merge the test data set with the training data set and again train our SVM model. We do this iteratively for the data from all the days to follow. Thus, as we process more data files, and add to the training set, our model improves in the prediction accuracy.
+
