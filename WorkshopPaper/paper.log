@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  15 OCT 2014 07:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  15 OCT 2014 11:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -461,28 +461,23 @@ Underfull \hbox (badness 2452) in paragraph at lines 91--92
 \OT1/ptm/m/n/10 URIs are gen-er-ated us-ing a Python trans-for-ma-tion, by
  []
 
-<img/augment_data_menu.png, id=123, 605.26125pt x 343.2825pt>
+[5 <./img/AccelerometerReadingModel.png> <./img/DFToutput.png>]
+<img/augment_data_menu.png, id=127, 605.26125pt x 343.2825pt>
 File: img/augment_data_menu.png Graphic file (type png)
 
 <use img/augment_data_menu.png>
 Package pdftex.def Info: img/augment_data_menu.png used on input line 98.
 (pdftex.def)             Requested size: 227.62204pt x 129.09727pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/model_after_augmentation.png, id=124, 1362.08875pt x 357.335pt>
+<img/model_after_augmentation.png, id=128, 1362.08875pt x 357.335pt>
 File: img/model_after_augmentation.png Graphic file (type png)
 
 <use img/model_after_augmentation.png>
 Package pdftex.def Info: img/model_after_augmentation.png used on input line 10
 5.
 (pdftex.def)             Requested size: 523.5307pt x 137.34267pt.
- [5 <./img/AccelerometerReadingModel.png> <./img/DFToutput.png>]
-Underfull \vbox (badness 1067) has occurred while \output is active []
-
- [6 <./img/motionSensorModel.png> <./img/augment_data_menu.png> <./img/model_af
-ter_augmentation.png>]) (./tex/alternate_approach.tex
+) (./tex/alternate_approach.tex [6 <./img/motionSensorModel.png> <./img/augment
+_data_menu.png>]
 Overfull \hbox (1.29726pt too wide) in paragraph at lines 11--11
 []|\OT1/ptm/m/n/7 10.688913| 
  []
@@ -540,7 +535,7 @@ Overfull \hbox (1.29726pt too wide) in paragraph at lines 65--65
 []|\OT1/ptm/m/n/7 1.0898862| 
  []
 
-[7]) (./tex/evaluation.tex
+[7 <./img/model_after_augmentation.png>]) (./tex/evaluation.tex
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
@@ -607,7 +602,7 @@ Before submitting the final camera ready copy, remember to:
 ] (./paper.aux) ) 
 Here is how much of TeX's memory you used:
  4267 strings out of 493117
- 67745 string characters out of 6135433
+ 67771 string characters out of 6135433
  165172 words of memory out of 5000000
  7643 multiletter control sequences out of 15000+600000
  40843 words of font info for 74 fonts, out of 8000000 for 9000
@@ -618,7 +613,7 @@ c}</usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/lo
 cal/texlive/2014/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texli
 ve/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/te
 xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (11 pages, 435380 bytes).
+Output written on paper.pdf (11 pages, 435926 bytes).
 PDF statistics:
  167 PDF objects out of 1000 (max. 8388607)
  102 compressed objects within 2 object streams

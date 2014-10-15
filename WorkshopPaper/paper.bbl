@@ -49,12 +49,14 @@ C.~A. Knoblock, P.~Szekely, J.~L. Ambite, S.~Gupta, A.~Goel, M.~Muslea,
   structured sources into the semantic web,'' in \emph{Proceedings of the
   Extended Semantic Web Conference}, Crete, Greece, 2012.
 
-\bibitem{MTP}
+\bibitem{Fayyad:1996:DMK:257938.257942}
 \BIBentryALTinterwordspacing
-S.~Reddy, M.~Mun, J.~Burke, D.~Estrin, M.~Hansen, and M.~Srivastava, ``Using
-  mobile phones to determine transportation modes,'' \emph{ACM Trans. Sen.
-  Netw.}, vol.~6, no.~2, pp. 13:1--13:27, Mar. 2010. [Online]. Available:
-  \url{http://doi.acm.org/10.1145/1689239.1689243}
+U.~M. Fayyad, G.~Piatetsky-Shapiro, and P.~Smyth, ``Advances in knowledge
+  discovery and data mining,'' U.~M. Fayyad, G.~Piatetsky-Shapiro, P.~Smyth,
+  and R.~Uthurusamy, Eds.\hskip 1em plus 0.5em minus 0.4em\relax Menlo Park,
+  CA, USA: American Association for Artificial Intelligence, 1996, ch. From
+  Data Mining to Knowledge Discovery: An Overview, pp. 1--34. [Online].
+  Available: \url{http://dl.acm.org/citation.cfm?id=257938.257942}
 \BIBentrySTDinterwordspacing
 
 \bibitem{szekely14:ijhac}
