@@ -1,0 +1,11 @@
+\section{Related Work}
+
+Preparing raw data for a data mining task typically reqiures mulitple data transformation steps. Many of these tasks are common across a large number of data mining applications, such as dealing with missing values, discretization, and normalization. However, in many cases, these are not sufficient and other transformation steps are required which are specific to the problem being solved.
+
+Popular data mining software suites like RapidMiner\footnote{http://rapidminer.com/products/rapidminer-studio} and KNIME\footnote{http://www.knime.org/knime} allow most of the common transformation steps. However, when it comes to performing data transformation tasks that are specific to the problem at hand, a majority of these suites do not provide support for such specialized transformations.
+
+There are also data preparation tools like DataPreparator\footnote{http://www.datapreparator.com} that offer most of the common data transformation tasks and operations like merging data from different files to prepare the data for mining, but these tools are just for data preparation and mining has to be done separately, unlike our end-to-end approach. Moreover, these tools do not provide support for problem-specific custom data transformation tasks.
+
+Google Refine\footnote{https://code.google.com/p/google-refine/} is another data transformation tool which has data cleaning capabilities, and supports some commonly used data transformation tasks. It also supports custom text transformations to modify text in data cells. Like in the case of other data preparation tools, data mining has to be done separately as Google Refine does not have data mining capabilities.
+
+Our work provides an end-to-end integrated approach for data preparation and mining, with support for problem-specific transformation tasks as features, extensions, or services. More- over, our work allows automation of data preparation tasks, which reduces the time taken to prepare data for mining.
