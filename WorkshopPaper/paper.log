@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  15 OCT 2014 07:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  15 OCT 2014 07:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -331,7 +331,7 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-(./tex/anon.tex) (./tex/abstract.tex) (./tex/introduction.tex
+(./tex/authors.tex) (./tex/abstract.tex) (./tex/introduction.tex
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 6.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -364,7 +364,7 @@ Underfull \hbox (badness 5832) in paragraph at lines 11--12
 nate val-ues
  []
 
-<img/ontology.pdf, id=88, 547.577pt x 621.13997pt>
+<img/ontology.pdf, id=87, 547.577pt x 621.13997pt>
 File: img/ontology.pdf Graphic file (type pdf)
  <use img/ontology.pdf>
 Package pdftex.def Info: img/ontology.pdf used on input line 17.
@@ -374,23 +374,20 @@ Overfull \hbox (3.02493pt too wide) in paragraph at lines 17--18
  [][] 
  []
 
-<img/DFTservice.png, id=89, 433.62pt x 304.13625pt>
+<img/DFTservice.png, id=88, 433.62pt x 304.13625pt>
 File: img/DFTservice.png Graphic file (type png)
  <use img/DFTservice.png>
 Package pdftex.def Info: img/DFTservice.png used on input line 31.
 (pdftex.def)             Requested size: 170.71652pt x 119.74036pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/getLabelService.png, id=90, 961.5925pt x 249.93375pt>
+<img/getLabelService.png, id=89, 961.5925pt x 249.93375pt>
 File: img/getLabelService.png Graphic file (type png)
 
 <use img/getLabelService.png>
 Package pdftex.def Info: img/getLabelService.png used on input line 40.
 (pdftex.def)             Requested size: 523.5307pt x 136.0758pt.
 
-<img/svmService.png, id=91, 1244.65pt x 303.1325pt>
+<img/svmService.png, id=90, 1244.65pt x 303.1325pt>
 File: img/svmService.png Graphic file (type png)
  <use img/svmService.png>
 Package pdftex.def Info: img/svmService.png used on input line 46.
@@ -464,16 +461,15 @@ Underfull \hbox (badness 2452) in paragraph at lines 91--92
 \OT1/ptm/m/n/10 URIs are gen-er-ated us-ing a Python trans-for-ma-tion, by
  []
 
-
-Underfull \vbox (badness 3919) has occurred while \output is active []
-
-
 <img/augment_data_menu.png, id=123, 605.26125pt x 343.2825pt>
 File: img/augment_data_menu.png Graphic file (type png)
 
 <use img/augment_data_menu.png>
 Package pdftex.def Info: img/augment_data_menu.png used on input line 98.
 (pdftex.def)             Requested size: 227.62204pt x 129.09727pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 <img/model_after_augmentation.png, id=124, 1362.08875pt x 357.335pt>
 File: img/model_after_augmentation.png Graphic file (type png)
@@ -482,12 +478,11 @@ File: img/model_after_augmentation.png Graphic file (type png)
 Package pdftex.def Info: img/model_after_augmentation.png used on input line 10
 5.
 (pdftex.def)             Requested size: 523.5307pt x 137.34267pt.
- [5 <./img/AccelerometerReadingModel.png> <./img/augment_data_menu.png> <./img/
-DFToutput.png>]
+ [5 <./img/AccelerometerReadingModel.png> <./img/DFToutput.png>]
 Underfull \vbox (badness 1067) has occurred while \output is active []
 
- [6 <./img/motionSensorModel.png> <./img/model_after_augmentation.png>])
-(./tex/alternate_approach.tex
+ [6 <./img/motionSensorModel.png> <./img/augment_data_menu.png> <./img/model_af
+ter_augmentation.png>]) (./tex/alternate_approach.tex
 Overfull \hbox (1.29726pt too wide) in paragraph at lines 11--11
 []|\OT1/ptm/m/n/7 10.688913| 
  []
@@ -545,7 +540,7 @@ Overfull \hbox (1.29726pt too wide) in paragraph at lines 65--65
 []|\OT1/ptm/m/n/7 1.0898862| 
  []
 
-) (./tex/evaluation.tex [7]
+[7]) (./tex/evaluation.tex
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
@@ -558,6 +553,9 @@ Overfull \hbox (1.8419pt too wide) in paragraph at lines 30--30
 Overfull \hbox (3.03252pt too wide) in paragraph at lines 30--30
  \OT1/ptm/b/n/7 Progress| 
  []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [8]
 Overfull \hbox (1.8419pt too wide) in paragraph at lines 64--64
@@ -592,7 +590,7 @@ Overfull \hbox (1.73735pt too wide) in paragraph at lines 107--107
 []|[]| 
  []
 
-) (./tex/related.tex [9]) (./tex/discussion.tex) (./paper.bbl)
+[9]) (./tex/related.tex) (./tex/discussion.tex) (./paper.bbl [10])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -604,24 +602,26 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[10] (./paper.aux) ) 
+[11
+
+] (./paper.aux) ) 
 Here is how much of TeX's memory you used:
- 4266 strings out of 493117
- 67730 string characters out of 6135433
- 157172 words of memory out of 5000000
+ 4267 strings out of 493117
+ 67745 string characters out of 6135433
+ 165172 words of memory out of 5000000
  7643 multiletter control sequences out of 15000+600000
- 39765 words of font info for 73 fonts, out of 8000000 for 9000
+ 40843 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,12n,38p,1249b,316s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r
-.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr
-/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/te
-xlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014
-/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (10 pages, 434273 bytes).
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.en
+c}</usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/te
+xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on paper.pdf (11 pages, 435380 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
+ 167 PDF objects out of 1000 (max. 8388607)
+ 102 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

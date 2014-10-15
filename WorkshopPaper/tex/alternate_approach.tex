@@ -4,7 +4,7 @@ Microsoft Excel is one of the most widely used applications for data cleaning an
 
 \begin{table}[h]
 	\centering	
-	\caption{Sample acceleroemter data after adding magnitude\label{tab:sample_data_acce}}
+	\caption{Sample accelerometer data after adding magnitude\label{tab:sample_data_acce}}
   	\begin{tabular}{ | p{2cm} | p{1.3cm} | p{1cm} | p{1cm} | p{1.5cm} | }
     	\hline
 	    \textbf{timestamp} & \textbf{x} & \textbf{y} & \textbf{z} & \textbf{magnitude} \\ \hline
@@ -20,7 +20,7 @@ One of the most important and rather annoying aspects of data preparation is its
 
 \begin{table}[h]
 	\centering	
-	\caption{Sample ouput after running the addDFT script\label{tab:sample_acce_dft}}
+	\caption{Sample output after running the addDFT script\label{tab:sample_acce_dft}}
   	\begin{tabular}{ | p{1.1cm} | p{1.3cm} | p{1.4cm} | p{1.4cm} | p{1.4cm} | }
     	\hline
 	    \textbf{timestamp} & \textbf{magnitude} & \textbf{DFT\_E1} & \textbf{DFT\_E2} & \textbf{DFT\_E3} \\ \hline
@@ -32,7 +32,7 @@ One of the most important and rather annoying aspects of data preparation is its
   	\end{tabular}
 \end{table}
 
-We start by processing the AccelerometerSensor file for the first day. The timestamp column in the file contains decimal values; hence we change the default column format in excel, to contain decimal point upto 4 places. We then add a new column for the acceleration magnitude, that is calculated as the sum of squared values of the x,y and z coordinates. The coordinate values are fetched from their respective columns in the same file as shown in Table\ref{tab:sample_data_acce}. We apply a formula to get the magnitude value for the first row, and repeat it across the entire worksheet to calculate accleration magnitude for the remaining rows. Once we have the magnitude, we prepare the file for DFT calculation. We select two columns --- timestamp and magnitude, and create a new file having only these columns. The addDFT Python script is executed from the command line with the newly created file as input. The script generates an output file having the DFT energy coefficients at 1Hz, 2Hz, and 3Hz of the acceleration magnitude for every 1 second time window.
+We start by processing the AccelerometerSensor file for the first day. The timestamp column in the file contains decimal values; hence we change the default column format in excel, to contain decimal point upto 4 places. We then add a new column for the acceleration magnitude, that is calculated as the sum of squared values of the x,y and z coordinates. The coordinate values are fetched from their respective columns in the same file as shown in Table\ref{tab:sample_data_acce}. We apply a formula to get the magnitude value for the first row, and repeat it across the entire worksheet to calculate acceleration magnitude for the remaining rows. Once we have the magnitude, we prepare the file for DFT calculation. We select two columns --- timestamp and magnitude, and create a new file having only these columns. The addDFT Python script is executed from the command line with the newly created file as input. The script generates an output file having the DFT energy coefficients at 1Hz, 2Hz, and 3Hz of the acceleration magnitude for every 1 second time window.
 
 % \begin{table}[h]
 % 	\centering	
@@ -48,7 +48,7 @@ We start by processing the AccelerometerSensor file for the first day. The times
 %   	\end{tabular}
 % \end{table}
 
-The Accelerometer sensor produces a large number of readings when compared to the GPS sensor. Before using the LocationProbe file, we merge all of the files from three days into one because we only perform join operation using the LocationProbe data with the addDFT service output, and no other transformations. The accelerometer data cannot be merged because it contains continuous timeseries data and the DFT calculations are performed over a time window. Merging the accelerometer data files will create gaps in the time window leading to incorrect DFT calculations. The merging of LocationProbe file is done in both our approaches. 
+The Accelerometer sensor produces a large number of readings when compared to the GPS sensor. Before using the LocationProbe file, we merge all of the files from three days into one because we only perform join operation using the LocationProbe data with the addDFT service output, and no other transformations. The accelerometer data cannot be merged because it contains continuous time-series data and the DFT calculations are performed over a time window. Merging the accelerometer data files will create gaps in the time window leading to incorrect DFT calculations. The merging of LocationProbe file is done in both our approaches. 
 
 
 In the LocationProbe file, we select and copy 3 columns – `timestamp', `mSpeed', `mAccuracy' into a new worksheet. We format the timestamp column to have decimal values and add a new column, `absTimestamp', that will contain the absolute values of timestamp. We apply the `Round' formula to populate the `absTimestamp' column. In the next step, we load the output file generated from the addDFT script into a new worksheet in the current workbook. We join the two worksheets to combine the speed and accuracy columns with the DFT energy coefficients. We then add two new columns for speed and accuracy and apply the VLookUp formula to join the LocationProbe data by using the `absTimestamp' column as the key.
