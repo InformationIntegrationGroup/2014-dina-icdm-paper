@@ -1,6 +1,6 @@
 \section{Alternate Approach: Processing with Excel}
 
-Microsoft Excel is one of the most widely used applications for data cleaning and preparation. It is not only easy to learn but also powerful to perform numerous computations across multiple rows and columns. Other proprietary packages that are available for data preparation are much more complex to use and usually require  user training. Despite Excel being very popular amongst users who are not tech savvy and do not possess the skills to write scripts for data preparation, we illustrate several shortcomings of using Excel for data preparation. 
+Microsoft Excel is one of the most widely used applications for data cleaning and preparation. It is not only easy to learn but also powerful to perform numerous computations across multiple rows and columns. Other proprietary packages that are available for data preparation are much more complex to use and usually require  user training. Despite Excel being very popular amongst users who are not tech savvy and do not possess the skills to write scripts for data preparation, we illustrate several shortcomings of using Excel for data preparation. Using Karma the user can publish models as linked data which are accessible globally for others to reuse, which is not possible using Excel files.
 
 \begin{table}[h]
 	\centering	
@@ -34,22 +34,7 @@ One of the most important and rather annoying aspects of data preparation is its
 
 We start by processing the AccelerometerSensor file for the first day. The timestamp column in the file contains decimal values; hence we change the default column format in excel, to contain decimal point upto 4 places. We then add a new column for the acceleration magnitude, that is calculated as the sum of squared values of the x,y and z coordinates. The coordinate values are fetched from their respective columns in the same file as shown in Table\ref{tab:sample_data_acce}. We apply a formula to get the magnitude value for the first row, and repeat it across the entire worksheet to calculate acceleration magnitude for the remaining rows. Once we have the magnitude, we prepare the file for DFT calculation. We select two columns --- timestamp and magnitude, and create a new file having only these columns. The addDFT Python script is executed from the command line with the newly created file as input. The script generates an output file having the DFT energy coefficients at 1Hz, 2Hz, and 3Hz of the acceleration magnitude for every 1 second time window.
 
-% \begin{table}[h]
-% 	\centering	
-% 	\caption{Showing 5 columns from the LocationProbe dataset\label{tab:sample_location_data}}
-%   	\begin{tabular}{ | p{1.1cm} | p{2cm} | p{2cm} | p{1cm} | p{0.732009cm} | }
-%     	\hline
-% 	    \textbf{timestamp} & \textbf{latitude} & \textbf{longitude} & \textbf{speed} & \textbf{accuracy} \\ \hline
-% 	    1387969151 & 22.58586372 & 88.38064909 & 0 & 32 \\ \hline
-% 		1387969185 & 22.5858598 & 88.37985344 & 0 & 12 \\ \hline
-% 		1387969186 & 22.58581108 & 88.37984354 & 0.80203056 & 12 \\ \hline
-% 		1387969282 & 22.58534547 & 88.37977455 & 1.0898862 & 24 \\
-% 	    \hline
-%   	\end{tabular}
-% \end{table}
-
 The Accelerometer sensor produces a large number of readings when compared to the GPS sensor. Before using the LocationProbe file, we merge all of the files from three days into one because we only perform join operation using the LocationProbe data with the addDFT service output, and no other transformations. The accelerometer data cannot be merged because it contains continuous time-series data and the DFT calculations are performed over a time window. Merging the accelerometer data files will create gaps in the time window leading to incorrect DFT calculations. The merging of LocationProbe file is done in both our approaches. 
-
 
 In the LocationProbe file, we select and copy 3 columns – `timestamp', `mSpeed', `mAccuracy' into a new worksheet. We format the timestamp column to have decimal values and add a new column, `absTimestamp', that will contain the absolute values of timestamp. We apply the `Round' formula to populate the `absTimestamp' column. In the next step, we load the output file generated from the addDFT script into a new worksheet in the current workbook. We join the two worksheets to combine the speed and accuracy columns with the DFT energy coefficients. We then add two new columns for speed and accuracy and apply the VLookUp formula to join the LocationProbe data by using the `absTimestamp' column as the key.
 
@@ -67,7 +52,11 @@ In the LocationProbe file, we select and copy 3 columns – `timestamp', `mSpeed
   	\end{tabular}
 \end{table}
 
-\begin{table*}[bp]
+We add separate VLookUp formulas for each of the speed and accuracy columns to populate the respective values. For the rows that could not yield any value after the join, either for speed or for the accuracy column, we delete them and save the file as a CSV file. The missing values in the data set arise due to failure of probes --- accelerometer or GPS, while collecting data for a particular timestamp. We now execute the addLabel Python script using the previously joined file as input and generate our final processed file with the mode of transportation labels. The addLabel script attaches the mode of transportation label to each row based on the time intervals specified by the user. Table \ref{tab:sample_csv} shows the structure of the processed CSV file that is used to train and test the SVM model.
+
+Since this is the first file that we process, we will execute the svmTraining script and use the processed data as training set. For the files from the succeeding days, we first invoke SVM testing script and evaluate our model for the accuracy. We merge the test data set with the training data set and again train our SVM model. We do this iteratively for the data from all the days to follow. Thus, as we process more data files, and add to the training set, our model improves in the prediction accuracy.
+
+\begin{table*}[ht]
 	\centering
 	\caption{Structure of the processed file\label{tab:sample_csv}}
   	\begin{tabular}{ |c|c|c|c|c|c|c|c|}
@@ -80,8 +69,3 @@ In the LocationProbe file, we select and copy 3 columns – `timestamp', `mSpeed
 	    \hline
   	\end{tabular}
 \end{table*}
-
-We add separate VLookUp formulas for each of the speed and accuracy columns to populate the respective values. For the rows that could not yield any value after the join, either for speed or for the accuracy column, we delete them and save the file as a CSV file. The missing values in the data set arise due to failure of probes --- accelerometer or GPS, while collecting data for a particular timestamp. We now execute the addLabel Python script using the previously joined file as input and generate our final processed file with the mode of transportation labels. The addLabel script attaches the mode of transportation label to each row based on the time intervals specified by the user. Table \ref{tab:sample_csv} shows the structure of the processed CSV file that is used to train and test the SVM model.
-
-Since this is the first file that we process, we will execute the svmTraining script and use the processed data as training set. For the files from the succeeding days, we first invoke SVM testing script and evaluate our model for the accuracy. We merge the test data set with the training data set and again train our SVM model. We do this iteratively for the data from all the days to follow. Thus, as we process more data files, and add to the training set, our model improves in the prediction accuracy.
-
