@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  18 OCT 2014 22:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  21 OCT 2014 08:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -251,21 +251,22 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 137.
 )
+** ATTENTION: Overriding command lockouts (line 357).
 (./paper.aux)
 \openout1 = `paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 357.
-LaTeX Font Info:    ... okay on input line 357.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 357.
-LaTeX Font Info:    ... okay on input line 357.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 357.
-LaTeX Font Info:    ... okay on input line 357.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 357.
-LaTeX Font Info:    ... okay on input line 357.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 357.
-LaTeX Font Info:    ... okay on input line 357.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 357.
-LaTeX Font Info:    ... okay on input line 357.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 358.
+LaTeX Font Info:    ... okay on input line 358.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 358.
+LaTeX Font Info:    ... okay on input line 358.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 358.
+LaTeX Font Info:    ... okay on input line 358.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 358.
+LaTeX Font Info:    ... okay on input line 358.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 358.
+LaTeX Font Info:    ... okay on input line 358.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 358.
+LaTeX Font Info:    ... okay on input line 358.
 
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -352,7 +353,7 @@ ap/pdftex.map}
 
 
 ]
-Underfull \vbox (badness 1137) has occurred while \output is active []
+Underfull \vbox (badness 1325) has occurred while \output is active []
 
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
@@ -373,6 +374,9 @@ Package pdftex.def Info: img/ontology.pdf used on input line 16.
 Overfull \hbox (3.02493pt too wide) in paragraph at lines 16--17
  [][] 
  []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 <img/DFTservice.png, id=88, 433.62pt x 304.13625pt>
 File: img/DFTservice.png Graphic file (type png)
@@ -413,7 +417,9 @@ File: img/DFToutput.png Graphic file (type png)
 Package pdftex.def Info: img/DFToutput.png used on input line 72.
 (pdftex.def)             Requested size: 503.61377pt x 141.33856pt.
 
-[4 <./img/getLabelService.png> <./img/svmService.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <./img/getLabelService.png> <./img/svmService.png>]
 <img/motionSensorModel.png, id=122, 950.55125pt x 353.32pt>
 File: img/motionSensorModel.png Graphic file (type png)
 
@@ -456,10 +462,6 @@ Underfull \hbox (badness 2452) in paragraph at lines 89--90
 \OT1/ptm/m/n/10 URIs are gen-er-ated us-ing a Python trans-for-ma-tion, by
  []
 
-
-Underfull \vbox (badness 1210) has occurred while \output is active []
-
-
 <img/model_after_augmentation.png, id=123, 1362.08875pt x 357.335pt>
 File: img/model_after_augmentation.png Graphic file (type png)
 
@@ -468,8 +470,10 @@ Package pdftex.def Info: img/model_after_augmentation.png used on input line 96
 .
 (pdftex.def)             Requested size: 523.5307pt x 137.34267pt.
  [5 <./img/AccelerometerReadingModel.png> <./img/DFToutput.png>]) (./tex/altern
-ate_approach.tex [6 <./img/motionSensorModel.png> <./img/model_after_augmentati
-on.png>]
+ate_approach.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <./img/motionSensorModel.png> <./img/model_after_augmentation.png>]
 Overfull \hbox (1.29726pt too wide) in paragraph at lines 11--11
 []|\OT1/ptm/m/n/7 10.688913| 
  []
@@ -532,9 +536,6 @@ Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
 
-Underfull \vbox (badness 2221) has occurred while \output is active []
-
-
 Overfull \hbox (1.8419pt too wide) in paragraph at lines 28--28
  []|\OT1/ptm/b/n/7 Step| 
  []
@@ -565,11 +566,14 @@ Underfull \hbox (badness 2635) in paragraph at lines 66--66
  []
 
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 Overfull \hbox (1.73735pt too wide) in paragraph at lines 102--102
 []|[]| 
  []
 
-) (./tex/related.tex [9]) (./tex/discussion.tex) (./paper.bbl)
+) (./tex/related.tex [9]) (./tex/discussion.tex) (./paper.bbl [10])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -581,24 +585,26 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[10] (./paper.aux) ) 
+[11
+
+] (./paper.aux) ) 
 Here is how much of TeX's memory you used:
- 4262 strings out of 493117
- 67613 string characters out of 6135433
- 156166 words of memory out of 5000000
- 7639 multiletter control sequences out of 15000+600000
+ 4261 strings out of 493117
+ 67596 string characters out of 6135433
+ 155649 words of memory out of 5000000
+ 7638 multiletter control sequences out of 15000+600000
  40843 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,12n,38p,1343b,316s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r
-.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr
-/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/te
-xlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014
-/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (10 pages, 406022 bytes).
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.en
+c}</usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/te
+xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on paper.pdf (11 pages, 406178 bytes).
 PDF statistics:
- 161 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
+ 165 PDF objects out of 1000 (max. 8388607)
+ 102 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

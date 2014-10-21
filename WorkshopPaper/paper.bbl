@@ -36,13 +36,6 @@ M.~Hall, E.~Frank, G.~Holmes, B.~Pfahringer, P.~Reutemann, and I.~H. Witten,
   \url{http://doi.acm.org/10.1145/1656274.1656278}
 \BIBentrySTDinterwordspacing
 
-\bibitem{knoblock11:lisc}
-C.~A. Knoblock, P.~Szekely, J.~L. Ambite, S.~Gupta, A.~Goel, M.~Muslea,
-  K.~Lerman, and P.~Mallick, ``Interactively mapping data sources into the
-  semantic web,'' in \emph{Proceedings of the First International Workshop on
-  Linked Science 2011 in Conjunction with the 10th International Semantic Web
-  Conference}, Bonn, Germany, 2011.
-
 \bibitem{knoblock12:eswc}
 C.~A. Knoblock, P.~Szekely, J.~L. Ambite, S.~Gupta, A.~Goel, M.~Muslea,
   K.~Lerman, M.~Taheriyan, and P.~Mallick, ``Semi-automatically mapping
