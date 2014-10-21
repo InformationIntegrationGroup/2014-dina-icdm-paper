@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  21 OCT 2014 08:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  21 OCT 2014 09:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -360,7 +360,7 @@ Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 )
 (./tex/approach.tex [2 <./img/system_diagram.pdf>]
-Underfull \hbox (badness 5832) in paragraph at lines 10--11
+Underfull \hbox (badness 5832) in paragraph at lines 9--10
 []\OT1/ptm/m/it/10 AccelerometerSensor.csv\OT1/ptm/m/n/10 : Con-tains co-or-di-
 nate val-ues
  []
@@ -368,36 +368,29 @@ nate val-ues
 <img/ontology.pdf, id=87, 547.577pt x 621.13997pt>
 File: img/ontology.pdf Graphic file (type pdf)
  <use img/ontology.pdf>
-Package pdftex.def Info: img/ontology.pdf used on input line 16.
-(pdftex.def)             Requested size: 256.0748pt x 290.47624pt.
-
-Overfull \hbox (3.02493pt too wide) in paragraph at lines 16--17
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+Package pdftex.def Info: img/ontology.pdf used on input line 14.
+(pdftex.def)             Requested size: 241.84842pt x 274.34499pt.
 
 <img/DFTservice.png, id=88, 433.62pt x 304.13625pt>
 File: img/DFTservice.png Graphic file (type png)
  <use img/DFTservice.png>
-Package pdftex.def Info: img/DFTservice.png used on input line 29.
+Package pdftex.def Info: img/DFTservice.png used on input line 26.
 (pdftex.def)             Requested size: 156.49014pt x 109.76276pt.
 
 <img/getLabelService.png, id=89, 961.5925pt x 249.93375pt>
 File: img/getLabelService.png Graphic file (type png)
 
 <use img/getLabelService.png>
-Package pdftex.def Info: img/getLabelService.png used on input line 38.
+Package pdftex.def Info: img/getLabelService.png used on input line 34.
 (pdftex.def)             Requested size: 512.1496pt x 133.1164pt.
 
 <img/svmService.png, id=90, 1244.65pt x 303.1325pt>
 File: img/svmService.png Graphic file (type png)
  <use img/svmService.png>
-Package pdftex.def Info: img/svmService.png used on input line 44.
+Package pdftex.def Info: img/svmService.png used on input line 40.
 (pdftex.def)             Requested size: 512.1496pt x 124.7338pt.
 
-Underfull \hbox (badness 4416) in paragraph at lines 51--52
+Underfull \hbox (badness 4416) in paragraph at lines 47--48
 []\OT1/ptm/m/it/10 AccelerometerReading\OT1/ptm/m/n/10 : Con-tains data prop-er
 -ties for
  []
@@ -408,72 +401,72 @@ File: img/AccelerometerReadingModel.png Graphic file (type png)
 
 <use img/AccelerometerReadingModel.png>
 Package pdftex.def Info: img/AccelerometerReadingModel.png used on input line 6
-6.
+2.
 (pdftex.def)             Requested size: 332.89723pt x 99.26526pt.
 
 <img/DFToutput.png, id=117, 736.7525pt x 206.7725pt>
 File: img/DFToutput.png Graphic file (type png)
  <use img/DFToutput.png>
-Package pdftex.def Info: img/DFToutput.png used on input line 72.
+Package pdftex.def Info: img/DFToutput.png used on input line 68.
 (pdftex.def)             Requested size: 503.61377pt x 141.33856pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4 <./img/getLabelService.png> <./img/svmService.png>]
+[4 <./img/getLabelService.png> <./img/svmService.png>]
 <img/motionSensorModel.png, id=122, 950.55125pt x 353.32pt>
 File: img/motionSensorModel.png Graphic file (type png)
 
 <use img/motionSensorModel.png>
-Package pdftex.def Info: img/motionSensorModel.png used on input line 84.
+Package pdftex.def Info: img/motionSensorModel.png used on input line 80.
 (pdftex.def)             Requested size: 369.88582pt x 137.48694pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
 \OT1/ptm/m/it/10 mElapse-dReal-ti-me-Nanos, mEx-tras[]networkLocationSource,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
 \OT1/ptm/m/it/10 mEx-tras[]networkLocationType, mEx-tras[]travelState,
  []
 
 
-Underfull \hbox (badness 3407) in paragraph at lines 89--90
+Underfull \hbox (badness 3407) in paragraph at lines 85--86
 \OT1/ptm/m/it/10 mHasAc-cu-racy, mHasAlti-tude, mHas-Bear-ing, mHas-Speed,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
 \OT1/ptm/m/it/10 mLat-i-tude, mLon-gi-tude, mProvider, mSpeed, mTime,
  []
 
 
-Underfull \hbox (badness 1527) in paragraph at lines 89--90
+Underfull \hbox (badness 1527) in paragraph at lines 85--86
 \OT1/ptm/m/it/10 times-tamp, etc\OT1/ptm/m/n/10 . Out of these we only use `tim
 es-tamp',
  []
 
 
-Underfull \hbox (badness 2435) in paragraph at lines 89--90
+Underfull \hbox (badness 2435) in paragraph at lines 85--86
 \OT1/ptm/m/n/10 `Ac-celerom-e-ter-Read-ing' and `Mo-tion-Sen-sor' classes. The
  []
 
 
-Underfull \hbox (badness 2452) in paragraph at lines 89--90
+Underfull \hbox (badness 2452) in paragraph at lines 85--86
 \OT1/ptm/m/n/10 URIs are gen-er-ated us-ing a Python trans-for-ma-tion, by
  []
+
+
+Underfull \vbox (badness 1210) has occurred while \output is active []
+
 
 <img/model_after_augmentation.png, id=123, 1362.08875pt x 357.335pt>
 File: img/model_after_augmentation.png Graphic file (type png)
 
 <use img/model_after_augmentation.png>
-Package pdftex.def Info: img/model_after_augmentation.png used on input line 96
+Package pdftex.def Info: img/model_after_augmentation.png used on input line 92
 .
 (pdftex.def)             Requested size: 523.5307pt x 137.34267pt.
  [5 <./img/AccelerometerReadingModel.png> <./img/DFToutput.png>]) (./tex/altern
-ate_approach.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6 <./img/motionSensorModel.png> <./img/model_after_augmentation.png>]
+ate_approach.tex [6 <./img/motionSensorModel.png> <./img/model_after_augmentati
+on.png>]
 Overfull \hbox (1.29726pt too wide) in paragraph at lines 11--11
 []|\OT1/ptm/m/n/7 10.688913| 
  []
@@ -536,6 +529,9 @@ Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
 
+Underfull \vbox (badness 2221) has occurred while \output is active []
+
+
 Overfull \hbox (1.8419pt too wide) in paragraph at lines 28--28
  []|\OT1/ptm/b/n/7 Step| 
  []
@@ -566,14 +562,11 @@ Underfull \hbox (badness 2635) in paragraph at lines 66--66
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 Overfull \hbox (1.73735pt too wide) in paragraph at lines 102--102
 []|[]| 
  []
 
-) (./tex/related.tex [9]) (./tex/discussion.tex) (./paper.bbl [10])
+) (./tex/related.tex [9]) (./tex/discussion.tex) (./paper.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -585,26 +578,24 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[11
-
-] (./paper.aux) ) 
+[10] (./paper.aux) ) 
 Here is how much of TeX's memory you used:
  4261 strings out of 493117
  67596 string characters out of 6135433
- 155649 words of memory out of 5000000
+ 156649 words of memory out of 5000000
  7638 multiletter control sequences out of 15000+600000
  40843 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,12n,38p,1343b,316s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.en
-c}</usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/lo
-cal/texlive/2014/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/te
-xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (11 pages, 406178 bytes).
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r
+.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on paper.pdf (10 pages, 405731 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
- 102 compressed objects within 2 object streams
+ 161 PDF objects out of 1000 (max. 8388607)
+ 100 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
