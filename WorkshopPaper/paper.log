@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  26 OCT 2014 13:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  28 OCT 2014 09:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -418,42 +418,6 @@ File: img/motionSensorModel.png Graphic file (type png)
 Package pdftex.def Info: img/motionSensorModel.png used on input line 80.
 (pdftex.def)             Requested size: 369.88582pt x 137.48694pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
-\OT1/ptm/m/it/10 mElapse-dReal-ti-me-Nanos, mEx-tras[]networkLocationSource,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
-\OT1/ptm/m/it/10 mEx-tras[]networkLocationType, mEx-tras[]travelState,
- []
-
-
-Underfull \hbox (badness 3407) in paragraph at lines 85--86
-\OT1/ptm/m/it/10 mHasAc-cu-racy, mHasAlti-tude, mHas-Bear-ing, mHas-Speed,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
-\OT1/ptm/m/it/10 mLat-i-tude, mLon-gi-tude, mProvider, mSpeed, mTime,
- []
-
-
-Underfull \hbox (badness 1527) in paragraph at lines 85--86
-\OT1/ptm/m/it/10 times-tamp, etc\OT1/ptm/m/n/10 . Out of these we only use `tim
-es-tamp',
- []
-
-
-Underfull \hbox (badness 2435) in paragraph at lines 85--86
-\OT1/ptm/m/n/10 `Ac-celerom-e-ter-Read-ing' and `Mo-tion-Sen-sor' classes. The
- []
-
-
-Underfull \hbox (badness 2452) in paragraph at lines 85--86
-\OT1/ptm/m/n/10 URIs are gen-er-ated us-ing a Python trans-for-ma-tion, by
- []
-
-
 Underfull \vbox (badness 1210) has occurred while \output is active []
 
 
@@ -529,9 +493,6 @@ Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
 
-Underfull \vbox (badness 2221) has occurred while \output is active []
-
-
 Overfull \hbox (1.8419pt too wide) in paragraph at lines 28--28
  []|\OT1/ptm/b/n/7 Step| 
  []
@@ -566,7 +527,11 @@ Overfull \hbox (1.73735pt too wide) in paragraph at lines 102--102
 []|[]| 
  []
 
-) (./tex/related.tex [9]) (./tex/discussion.tex) (./paper.bbl)
+) (./tex/related.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9])
+(./tex/discussion.tex) (./paper.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -582,7 +547,7 @@ Before submitting the final camera ready copy, remember to:
 Here is how much of TeX's memory you used:
  4261 strings out of 493117
  67596 string characters out of 6135433
- 156649 words of memory out of 5000000
+ 155649 words of memory out of 5000000
  7638 multiletter control sequences out of 15000+600000
  40843 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -592,7 +557,7 @@ Here is how much of TeX's memory you used:
 /local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/te
 xlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014
 /texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (10 pages, 405858 bytes).
+Output written on paper.pdf (10 pages, 405591 bytes).
 PDF statistics:
  161 PDF objects out of 1000 (max. 8388607)
  100 compressed objects within 1 object stream
